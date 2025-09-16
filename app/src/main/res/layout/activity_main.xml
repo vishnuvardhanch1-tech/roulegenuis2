@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/tvHotColdTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hot / Cold Numbers"
+    android:textSize="18sp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="16dp"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvHotCold"
+    android:layout_width="0dp"
+    android:layout_height="120dp"
+    app:layout_constraintTop_toBottomOf="@id/tvHotColdTitle"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_margin="8dp"/>
+
+  <TextView
+    android:id="@+id/tvHistoryTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Spin History"
+    android:textSize="18sp"
+    app:layout_constraintTop_toBottomOf="@id/rvHotCold"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="16dp"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvHistory"
+    android:layout_width="0dp"
+    android:layout_height="150dp"
+    app:layout_constraintTop_toBottomOf="@id/tvHistoryTitle"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_margin="8dp"/>
+
+  <TextView
+    android:id="@+id/tvPredictionTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Next Prediction"
+    android:textSize="18sp"
+    app:layout_constraintTop_toBottomOf="@id/rvHistory"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="16dp"/>
+
+  <TextView
+    android:id="@+id/tvPredictionValue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="--"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:textColor="@android:color/holo_red_dark"
+    app:layout_constraintTop_toBottomOf="@id/tvPredictionTitle"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="16dp"/>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fabSessionSummary"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@android:drawable/ic_menu_info_details"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_margin="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
